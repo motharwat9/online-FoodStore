@@ -1,0 +1,63 @@
+<!-- <div class="parent">
+   <div class="container bg-danger" >
+      <div class="row flex-wrap  bg-warning ">
+         <div class="bg-primary col-md-4 col-12 image">
+            <img [src]="food?.imageUrl" alt="food-image" >
+         </div>
+         <div class="bg-secondary col-md-8 col-12 ">
+            <div class="d-flex justify-content-between align-items-center mt-2">
+               <h1 class="name">{{food?.name}}</h1>
+               <h2 class="favorite  {{food?.favorite? '': 'not'}}  " >❤</h2>
+            </div>
+            <div>
+               <app-star-rating [stars]="food?.stars" [size]="1.8"></app-star-rating>
+            </div>
+               <mat-chip-listbox>
+                  <mat-chip *ngFor="let origin of food?.origins" >
+                     <span style="font-size: 15px;">{{origin}}</span>
+                  </mat-chip>
+               </mat-chip-listbox>
+               <app-tags [tags]="food?.tags" [showAll]="false"></app-tags>
+               <h4 style="font-size: 15px;">Time to cook about {{food?.cookTime}} minutes</h4>
+            <div>
+               <h4 class="price">{{food?.price | currency}}</h4>
+            </div>
+            <button>Add To Cart</button>
+         </div>
+      </div>
+   </div>
+</div>-->
+
+
+<div class="container">
+  <img [src]="food?.imageUrl" [alt]="food?.name"/>
+
+  <div class="details">
+    <div class="header">
+      <span class="name">{{food?.name}}</span>
+      <span class="favorite {{food?.favorite? '': 'not'}}">❤</span>
+    </div>
+    <div class="rating">
+      <app-star-rating [stars]="food?.stars" [size]="1.8" />
+    </div>
+    <div class="origins">
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let origin of food?.origins" >
+           <span style="font-size: 15px;">{{origin}}</span>
+        </mat-chip>
+     </mat-chip-listbox>
+    </div>
+    <div class="tags">
+      <app-tags [tags]="food?.tags" [showAll]="false"></app-tags>
+    </div>
+    <div class="cook-time">
+      <span>Time to cook about <strong>{{food?.cookTime}}</strong> minutes</span>
+    </div>
+    <div class="price">
+      <span>
+        {{food?.price | currency}}
+      </span>
+    </div>
+    <button (click)="addToCart()">Add To Cart</button>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+@import '../../../../app.component.scss';
+
+nav{
+   background: $main-colors;
+   border-bottom:2px solid $border-color;
+   ul {
+      padding: 1rem;
+   }
+   a{
+      padding: 1rem;
+      color: $text-color;
+      &.logo{
+         font-weight: bolder;
+      }
+      &:hover{
+         color: white;
+         background-color: $hover-colors;
+      }
+   }
+}

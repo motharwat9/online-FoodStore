@@ -1,0 +1,27 @@
+.example-card {
+   // margin: 10px;
+   border: 1px solid whitesmoke;
+   border-radius: 1rem;
+   -webkit-border-radius: 1rem;
+   -moz-border-radius: 1rem;
+   -ms-border-radius: 1rem;
+   -o-border-radius: 1rem;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   color: #e72929;
+   &:hover{
+      opacity: 0.8;
+   }
+}
+.favorite{
+   color: #e72929;
+ }
+ 
+ .favorite.not{
+   color: grey;
+ }
+ .mat-mdc-chip.mat-mdc-standard-chip {
+   --mdc-chip-container-height: 20px;
+ }
+
